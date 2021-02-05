@@ -7,7 +7,7 @@
     <meta name="coin" content="{{ $coin }}">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>| Valor Atual |</title>
+    <title>| Coin Now |</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
@@ -37,6 +37,7 @@
 
     <!-- Custom styles for this template -->
     <script src="{{ asset('asset/js/app.js') }}"></script>
+    <link rel="Ícone Atalho" href="{{ asset('asset/img/icon.ico') }}" type="image/x-icon" />
 </head>
 <body>
 
