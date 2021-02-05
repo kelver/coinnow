@@ -9,11 +9,9 @@ function getData() {
         var dias = [];
         var valores = [];
         $.each(data, function (key, item) {
-            console.log(item)
             dias.push(item.dia);
             valores.push(item.bid);
         });
-console.log(dias, valores)
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -66,7 +64,6 @@ console.log(dias, valores)
     }).fail(function(jqXHR, textStatus ) {
         console.log("Request failed: " + textStatus);
     }).always(function() {
-        console.log("completou");
     });
 }
 

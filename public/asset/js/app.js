@@ -28,7 +28,6 @@ function loadNews(search = 'bitcoin') {
         type: "POST",
         data: {'dias': 7, 'search': search},
     }).done(function (data) {
-        console.log(data);
         $.each(data.articles, function(key, item){
             var active = '';
             var htmlCarousel = '';
