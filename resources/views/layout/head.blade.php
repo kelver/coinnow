@@ -7,7 +7,7 @@
     <meta name="coin" content="{{ $coin }}">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>| Coin Now |</title>
+    <title>Coin Now | Valor do Bitcoin, Valor do Dólar, Conversor de Moedas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
