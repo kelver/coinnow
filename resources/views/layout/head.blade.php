@@ -37,7 +37,7 @@
 
     <!-- Custom styles for this template -->
     <script src="{{ asset('asset/js/app.js') }}"></script>
-    <link rel="Ícone Atalho" href="{{ asset('asset/img/icon.ico') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('asset/img/icon.ico') }}" type="image/x-icon" />
 </head>
 <body>
 
