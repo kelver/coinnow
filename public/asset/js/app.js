@@ -23,12 +23,10 @@ function loadNews(search = 'bitcoin') {
     $('.newsItem').empty();
     $('.miniBoxNews').empty();
     //trás notícias sobre a moeda padrão de acesso
-    var dataAtual = new Date;
-    dataAtual = dataAtual.getFullYear() +'-'+ (dataAtual.getMonth()+1) +'-'+ dataAtual.getDate();
-    console.log(dataAtual);
     $.ajax({
-        url: "http://newsapi.org/v2/everything?q="+ encodeURI(search) +"&pageSize=7&sortBy=publishedAt&language=pt&apiKey=22dc7327a8924716b7a82420e10ad0da" , //
-        type: "GET"
+        url: "api/v1/getNews" , //
+        type: "POST",
+        data: {'dias': 7, 'search': search},
     }).done(function (data) {
         console.log(data);
         $.each(data.articles, function(key, item){

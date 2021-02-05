@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('v1/coins', 'API\CoinsController@allCoins');
 Route::post('v1/coinBySigla', 'API\CoinsController@coinBySigla');
 Route::post('v1/fechamentoBySigla', 'API\CoinsController@fechamentoBySigla');
+Route::post('v1/getNews', 'API\NewsController@getNews');
