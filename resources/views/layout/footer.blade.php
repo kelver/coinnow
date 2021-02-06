@@ -13,15 +13,7 @@
         <p class="footer-links">
             <a class="link-1" href="/">Início</a>
 
-{{--            <a href="#">Blog</a>--}}
-
-{{--            <a href="#">Pricing</a>--}}
-
-{{--            <a href="#">About</a>--}}
-
-{{--            <a href="#">Faq</a>--}}
-
-{{--            <a href="#">Contact</a>--}}
+            <a href="BTC">Bitcoin</a>
         </p>
 
         <p><b>Coin Now | {{ \Carbon\Carbon::now()->format('Y') }}</b></p>

@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Cotação do dólar, cotação do bitcoin, valor do bitcoin, conversor de moedas, converter bitcoin para real, converter dólar para real.">
     <meta name="coin" content="{{ $coin }}">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
     <title>Coin Now | Valor do Bitcoin, Valor do Dólar, Conversor de Moedas</title>
+    <link rel=“canonical” href="{{ url()->current() }}" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->

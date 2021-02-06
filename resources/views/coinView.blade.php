@@ -5,7 +5,7 @@
             <div class="col-sm-5 boxConversao">
                 <div class="col-md-5 col-sm-12 box">
                     <div class="title">
-                        <span id="moeda" class="h1"></span>
+                        <h1 id="moeda" class="h1"></h1>
                     </div>
                     <div class="inputQ">
                         <input id="quantidade" name="quantidade" class="form-control inputQuantidade" value="1" />

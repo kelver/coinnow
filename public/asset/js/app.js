@@ -8,7 +8,7 @@ function loadCoin(sigla = '') {
     }).done(function (data) {
         var valor = parseFloat(data.moeda[0].bid);
 
-        $('#moeda').text(data.moeda[0].name);
+        $('#moeda').text("Conversão de " + data.moeda[0].name);
         $('#valor').text(valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
         $('#valor').attr('data-value', data.moeda[0].bid);
     }).fail(function (jqXHR, textStatus) {
