@@ -74,9 +74,4 @@
         </div>
     </div>
 </div>
-
-    <script src="{{ asset('asset/js/coinResult.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="{{ asset('asset/js/graphic.js') }}"></script>
-    <script src="{{ asset('asset/js/select.js') }}"></script>
 @include('layout.footer')
