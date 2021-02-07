@@ -16,6 +16,10 @@
     <link href="{{ asset('asset/css/custom.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('asset/img/icon.ico') }}" type="image/x-icon" />
     <meta name="coin" content="{{ $coin }}">
+
+{{--    ads--}}
+    <script data-ad-client="ca-pub-4718082710520823" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{{--    ads--}}
 </head>
 <body>
 
