@@ -1,21 +1,18 @@
 function loadCoin(sigla = '') {
     //trás moeda padrão de acesso
-    $.ajax({
-        url: "api/v1/coinBySigla",
-        type: "POST",
-        data: {'sigla': sigla},
-        dataType: "json"
-    }).done(function (data) {
-        var valor = parseFloat(data.moeda[0].bid);
+    fetch('api/v1/coinBySigla', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: {'sigla': sigla}
+    })
+    .then(function (data) {
+        data.json().then(function(data){
+            var valor = parseFloat(data.moeda[0].bid);
 
-        $('#moeda').text("Conversão de " + data.moeda[0].name);
-        $('#valor').text(valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
-        $('#valor').attr('data-value', data.moeda[0].bid);
-    }).fail(function (jqXHR, textStatus) {
-        console.log("Request failed: " + textStatus);
-
-    }).always(function () {
-
+            $('#moeda').text("Conversão de " + data.moeda[0].name);
+            $('#valor').text(valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}));
+            $('#valor').attr('data-value', data.moeda[0].bid);
+        });
     });
 }
 
@@ -99,6 +96,7 @@ function loadNews(search = 'bitcoin') {
             $('.newsItem').append(htmlCarousel);
             $('.miniBoxNews').append(htmlMiniBox);
 
+            $('.loadingSetup').css('display', 'none');
         });
     }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);

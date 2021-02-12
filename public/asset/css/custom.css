@@ -22,6 +22,34 @@ a, a:link, a:visited, a:active, a:focus{
     text-decoration: none;
 }
 
+
+/* loading */
+.loadingSetup {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes arrows {
+    0%,
+    100% {
+        color: black;
+        transform: translateY(0);
+    }
+    50% {
+        color: #3ab493;
+        transform: translateY(20px);
+    }
+}
+
+.loadingSetup span {
+    --delay: 0s;
+    animation: arrows 1s var(--delay) infinite ease-in;
+}
+
+/* loading */
+
 .main-footer {
     padding: 20px;
 }
