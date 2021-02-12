@@ -96,7 +96,7 @@ function loadNews(search = 'bitcoin') {
             $('.newsItem').append(htmlCarousel);
             $('.miniBoxNews').append(htmlMiniBox);
 
-            // $('.loadingSetup').css('display', 'none');
+            $('.loadingSetup').css('display', 'none');
         });
     }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);

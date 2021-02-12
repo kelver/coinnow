@@ -44,11 +44,11 @@
 
 
 <div class="loadingSetup">
-    <span>↓</span>
-    <span style="--delay: 0.1s">↓</span>
-    <span style="--delay: 0.3s">↓</span>
-    <span style="--delay: 0.4s">↓</span>
-    <span style="--delay: 0.5s">↓</span>
+    <span>&uarr;</span>
+    <span style="--delay: 0.1s">&uarr;</span>
+    <span style="--delay: 0.3s">&uarr;</span>
+    <span style="--delay: 0.4s">&uarr;</span>
+    <span style="--delay: 0.5s">&uarr;</span>
 </div>
 
 <header class="">
