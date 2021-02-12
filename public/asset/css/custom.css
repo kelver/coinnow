@@ -43,7 +43,7 @@ a, a:link, a:visited, a:active, a:focus{
     }
 }
 
-.loadingSetup span {
+.loadingSetup   span {
     --delay: 0s;
     animation: arrows 1s var(--delay) infinite ease-in;
 }
