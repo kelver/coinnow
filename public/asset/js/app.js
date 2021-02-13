@@ -43,8 +43,9 @@ function loadNews(search = 'bitcoin') {
                     '           <!--thumbnail img-->\n' +
                     '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
                     '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100"\n' +
+                    '                   <img class="img-fluid w-100" loading="lazy"\n' +
                     '                       src="'+ item.urlToImage +'"\n' +
+                    '                       width="150px" height="150px" \n' +
                     '                       alt="'+ item.title +'" style="min-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
                     '               </a>\n' +
                     '           </div>\n' +
@@ -77,8 +78,9 @@ function loadNews(search = 'bitcoin') {
                     '           <!--thumbnail img-->\n' +
                     '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
                     '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100"\n' +
+                    '                   <img class="img-fluid w-100" loading="lazy"\n' +
                     '                       src="'+ item.urlToImage +'"\n' +
+                    '                       width="150px" height="150px" \n' +
                     '                       alt="'+ item.title +'" style="min-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
                     '               </a>\n' +
                     '           </div>\n' +
