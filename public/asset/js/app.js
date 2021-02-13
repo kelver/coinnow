@@ -65,6 +65,7 @@ function loadNews(search = 'bitcoin') {
                     '</div>';
             }
 
+
             if(key > 2){
                 var pt = 3;
                 htmlMiniBox += '\n' +
