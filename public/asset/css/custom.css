@@ -7,6 +7,7 @@
 html,
 body {
     min-height: 100vh;
+    overflow: auto !important;
 }
 
 body {
@@ -123,10 +124,6 @@ a, a:link, a:visited, a:active, a:focus{
     left: inherit;
     margin-right: 1rem;
 }
-.overflow {
-    position: relative;
-    overflow: hidden;
-}
 .zoom img {
     transition: all 0.2s linear;
 }
@@ -209,9 +206,6 @@ a, a:link, a:visited, a:active, a:focus{
 }
 .selectLabel.active:after {
     content: '\25B2';
-}
-::-webkit-scrollbar {
-    display: none;
 }
 .options {
     position: absolute;

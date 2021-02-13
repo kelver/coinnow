@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use Carbon\Carbon;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
 
 class NewsRepository
 {
@@ -18,8 +19,12 @@ class NewsRepository
     }
 
     public function getNews(array $params){
-        $data = $this->client->get("http://newsapi.org/v2/everything?q=". urlencode($params['search']) ."&pageSize=". $params['dias'] ."&sortBy=publishedAt&language=pt&apiKey=". config('news.apiKey'));
+        if (!Cache::has('news')) {
+            $returnApi = $this->client->get("http://newsapi.org/v2/everything?q=". urlencode($params['search']) ."&pageSize=". $params['dias'] ."&sortBy=publishedAt&language=pt&apiKey=". config('news.apiKey'));
+            $returnApi = $returnApi->getBody()->getContents();
+            Cache::put('news', $returnApi, 60 * 60);
+        }
 
-        return $data->getBody()->getContents();
+        return Cache::get('news');
     }
 }

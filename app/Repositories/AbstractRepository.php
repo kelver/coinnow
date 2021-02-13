@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
 
 abstract class AbstractRepository
 {
@@ -17,6 +18,12 @@ abstract class AbstractRepository
     }
 
     public function all(){
-        return $this->client->getBody()->getContents();
+        if (!Cache::has('allCoins')) {
+            Cache::rememberForever('allCoins', function(){
+                return $this->client->getBody()->getContents();
+            });
+        }
+
+        return Cache::get('allCoins');
     }
 }

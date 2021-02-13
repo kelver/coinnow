@@ -12,8 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cotação do dólar, cotação do bitcoin, valor do bitcoin, conversor de moedas, converter bitcoin para real, converter dólar para real.">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.79.0">
+    <meta name="author" content="Coin Now e Colaboradores.">
     <title>Coin Now | Valor do Bitcoin, Valor do Dólar, Conversor de Moedas</title>
     <link rel=“canonical” href="{{ url()->current() }}" />
 
