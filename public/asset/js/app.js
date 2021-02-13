@@ -69,7 +69,7 @@ function loadNews(search = 'bitcoin') {
                 var pt = 3;
                 htmlMiniBox += '\n' +
                     '<div class="col-3 pb-1 pt-'+ pt +' pr-1" style="min-height: 150px !important; height: 150px !important;">\n' +
-                    '   <div class="card border-0 rounded-0 text-light overflow zoom" style="min-height: 100% !important; height: 100% !important;">\n' +
+                    '   <div class="card border-0 rounded-0 text-light overflow" style="min-height: 100% !important; height: 100% !important;">\n' +
                     '       <div class="position-relative" style="min-height: 100% !important; height: 100% !important;">\n' +
                     '           <!--thumbnail img-->\n' +
                     '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
