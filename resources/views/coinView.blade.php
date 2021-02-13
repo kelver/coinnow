@@ -26,7 +26,7 @@
                                         <!--SECTION START-->
                                         <section class="row">
                                             <!--Start slider news-->
-                                            <div class="col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+                                            <div class="col-md-12 pb-0 pb-md-12 pt-2 pr-md-1">
                                                 <div id="featured" class="carousel slide" data-ride="carousel" style="min-height: 100% !important; height: 100% !important;">
                                                     <!--carousel inner-->
                                                     <div class="carousel-inner newsItem" style="min-height: 100% !important; height: 100% !important;">
@@ -49,7 +49,7 @@
                                             <!--End slider news-->
 
                                             <!--Start box news-->
-                                            <div class="col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+                                            <div class="col-md-12 pt-2 pl-md-1 mb-3 mb-lg-4">
                                                 <div class="row miniBoxNews">
                                                     <!--news box-->
                                                     <!--end news box-->

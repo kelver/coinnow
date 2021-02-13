@@ -57,7 +57,7 @@ a, a:link, a:visited, a:active, a:focus{
 .boxConversao{
     background-color: #CF00DB;
     color: #FFF;
-    min-height: 45vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -43,7 +43,7 @@ function loadNews(search = 'bitcoin') {
                     '           <!--thumbnail img-->\n' +
                     '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
                     '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100" loading="lazy"\n' +
+                    '                   <img class="img-fluid w-100 imgHeight"\n' +
                     '                       src="'+ item.urlToImage +'"\n' +
                     '                       width="150px" height="150px" \n' +
                     '                       alt="'+ item.title +'" style="min-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
@@ -66,22 +66,18 @@ function loadNews(search = 'bitcoin') {
             }
 
             if(key > 2){
-                var pt = 1;
-                if(key > 4){
-                    pt = 3;
-                }
-
+                var pt = 3;
                 htmlMiniBox += '\n' +
-                    '<div class="col-6 pb-1 pt-'+ pt +' pr-1" style="min-height: 170px !important; height: 170px !important;">\n' +
+                    '<div class="col-3 pb-1 pt-'+ pt +' pr-1" style="min-height: 150px !important; height: 150px !important;">\n' +
                     '   <div class="card border-0 rounded-0 text-light overflow zoom" style="min-height: 100% !important; height: 100% !important;">\n' +
                     '       <div class="position-relative" style="min-height: 100% !important; height: 100% !important;">\n' +
                     '           <!--thumbnail img-->\n' +
                     '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
                     '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100" loading="lazy"\n' +
+                    '                   <img class="img-fluid w-100"\n' +
                     '                       src="'+ item.urlToImage +'"\n' +
                     '                       width="150px" height="150px" \n' +
-                    '                       alt="'+ item.title +'" style="min-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
+                    '                       alt="'+ item.title +'" style="min-height: 100% !important; max-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
                     '               </a>\n' +
                     '           </div>\n' +
                     '           <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">\n' +
@@ -95,6 +91,7 @@ function loadNews(search = 'bitcoin') {
                     '</div>';
             }
 
+            $(document).find('.imgHeight').css('height', $(document).find('.divAlturaImg').height() + 'px !important');
             $('.newsItem').append(htmlCarousel);
             $('.miniBoxNews').append(htmlMiniBox);
 
