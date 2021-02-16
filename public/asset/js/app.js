@@ -1,9 +1,11 @@
 function loadCoin(sigla = '') {
+    var data = new FormData();
+    data.append('sigla', sigla);
+
     //trás moeda padrão de acesso
     fetch('api/v1/coinBySigla', {
         method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: {'sigla': sigla}
+        body: data
     })
     .then(function (data) {
         data.json().then(function(data){
@@ -17,8 +19,7 @@ function loadCoin(sigla = '') {
 }
 
 function loadNews(search = 'bitcoin') {
-    $('.newsItem').empty();
-    $('.miniBoxNews').empty();
+    $('#newsItem').empty();
     //trás notícias sobre a moeda padrão de acesso
     $.ajax({
         url: "api/v1/getNews" , //
@@ -65,7 +66,6 @@ function loadNews(search = 'bitcoin') {
         });
 
         $('#newsItem').append(htmlCarousel);
-        $('.miniBoxNews').append(htmlMiniBox);
         $('.loadingSetup').css('display', 'none');
 
         console.log($(".boxConversao").height() - $(".boxTexto .h1").height() - 150 - 4);
