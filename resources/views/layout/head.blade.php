@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TWGLX32');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cotação do dólar, cotação do bitcoin, valor do bitcoin, conversor de moedas, converter bitcoin para real, converter dólar para real.">
@@ -23,25 +15,8 @@
     <link href="{{ asset('asset/css/custom.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('asset/img/icon.ico') }}" type="image/x-icon" />
     <meta name="coin" content="{{ $coin }}">
-    <!-- Google Analytics -->
-    <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'G-573R86RHG0', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
-{{--    ads--}}
-    <script data-ad-client="ca-pub-4718082710520823" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-{{--    ads--}}
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWGLX32"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
 <div class="loadingSetup">
     <span>&uarr;</span>
     <span style="--delay: 0.1s">&uarr;</span>

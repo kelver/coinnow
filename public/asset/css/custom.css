@@ -58,6 +58,7 @@ a, a:link, a:visited, a:active, a:focus{
     background-color: #CF00DB;
     color: #FFF;
     min-height: 85vh;
+    max-height: 85vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,6 +67,8 @@ a, a:link, a:visited, a:active, a:focus{
 .boxTexto{
     background-color: #DBAD16;
     color: #333;
+    min-height: 85vh;
+    height: 85px;
 }
 .boxTexto .h1{
     color: #FFF;
@@ -130,6 +133,9 @@ a, a:link, a:visited, a:active, a:focus{
 .zoom:hover img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+#featured{
+    min-width: 100%;
 }
 
 /* custom select */
@@ -352,6 +358,15 @@ a, a:link, a:visited, a:active, a:focus{
     }
     .footer-distributed .footer-left p.footer-links {
         line-height: 1.8;
+    }
+}
+
+
+
+/* max device width */
+@media screen and (max-device-width: 480px) {
+    .imgHeight {
+        height: auto !important;
     }
 }
 /* footer */

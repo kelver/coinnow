@@ -19,17 +19,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <span id="moeda" class="h1">Na Mìdia</span>
+                            <span class="h1">Na Mìdia</span>
                             <div class="row">
                                 <div class="col-12 pb-5">
                                     <div class="container">
                                         <!--SECTION START-->
                                         <section class="row">
                                             <!--Start slider news-->
-                                            <div class="col-md-12 pb-0 pb-md-12 pt-2 pr-md-1">
-                                                <div id="featured" class="carousel slide" data-ride="carousel" style="min-height: 100% !important; height: 100% !important;">
+                                            <div class="col-md-12 pt-5 pb-md-12 pt-2 pr-md-1">
+                                                <div id="featured" class="carousel slide" data-ride="carousel">
                                                     <!--carousel inner-->
-                                                    <div class="carousel-inner newsItem" style="min-height: 100% !important; height: 100% !important;">
+                                                    <div class="carousel-inner" id="newsItem">
                                                         <!--Item slider-->
                                                         <!--end item slider-->
                                                     </div>
@@ -49,7 +49,7 @@
                                             <!--End slider news-->
 
                                             <!--Start box news-->
-                                            <div class="col-md-12 pt-2 pl-md-1 mb-3 mb-lg-4">
+                                            <div class="col-md-12 pt-1 pl-md-1 mb-3 mb-lg-4">
                                                 <div class="row miniBoxNews">
                                                     <!--news box-->
                                                     <!--end news box-->

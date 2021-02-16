@@ -25,84 +25,56 @@ function loadNews(search = 'bitcoin') {
         type: "POST",
         data: {'dias': 7, 'search': search},
     }).done(function (data) {
+        let htmlCarousel = '';
+        let htmlMiniBox = '';
         $.each(data.articles, function(key, item){
-            var active = '';
-            var htmlCarousel = '';
-            var htmlMiniBox = '';
+            let active = '';
             let dataPub = new Date(item.publishedAt);
             let dataPubFormatada = (dataPub.getDate() ) + "/" + ((dataPub.getMonth() + 1)) + "/" + (dataPub.getFullYear()) ;               ;
             if(key == 0){
                 active = ' active';
             }
 
-            if(key <= 2){
-                htmlCarousel += '\n' +
-                    '<div class="carousel-item '+ active +'" style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '   <div class="card border-0 rounded-0 text-light overflow zoom" style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '       <div class="position-relative" style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '           <!--thumbnail img-->\n' +
-                    '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100 imgHeight"\n' +
-                    '                       src="'+ item.urlToImage +'"\n' +
-                    '                       width="150px" height="150px" \n' +
-                    '                       alt="'+ item.title +'" style="min-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
-                    '               </a>\n' +
-                    '           </div>\n' +
-                    '           <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">\n' +
-                    '               <!--title-->\n' +
-                    '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <h4 class="post-title text-white my-1">'+ item.title +'</h4>\n' +
-                    '               </a>\n' +
-                    '               <!-- meta title -->\n' +
-                    '               <div class="news-meta">\n' +
-                    '                   <span class="news-author">'+ item.source.name +'</span>\n' +
-                    '                   <span class="news-date">'+ dataPubFormatada +'</span>\n' +
-                    '               </div>\n' +
-                    '           </div>\n' +
-                    '       </div>\n' +
-                    '   </div>\n' +
-                    '</div>';
-            }
-
-
-            if(key > 2){
-                var pt = 3;
-                htmlMiniBox += '\n' +
-                    '<div class="col-3 pb-1 pt-'+ pt +' pr-1" style="min-height: 150px !important; height: 150px !important;">\n' +
-                    '   <div class="card border-0 rounded-0 text-light overflow" style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '       <div class="position-relative" style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '           <!--thumbnail img-->\n' +
-                    '           <div style="min-height: 100% !important; height: 100% !important;">\n' +
-                    '               <a href="'+ item.url +'" target="_blank">\n' +
-                    '                   <img class="img-fluid w-100"\n' +
-                    '                       src="'+ item.urlToImage +'"\n' +
-                    '                       width="150px" height="150px" \n' +
-                    '                       alt="'+ item.title +'" style="min-height: 100% !important; max-height: 100% !important; height: 100% !important; object-fit: cover;">\n' +
-                    '               </a>\n' +
-                    '           </div>\n' +
-                    '           <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">\n' +
-                    '               <!-- meta title -->\n' +
-                    '               <div class="news-meta">\n' +
-                    '                   <span class="news-author"><a href="'+ item.url +'" class="text-white">'+ item.source.name +'</a></span>\n' +
-                    '               </div>\n' +
-                    '           </div>\n' +
-                    '       </div>\n' +
-                    '   </div>\n' +
-                    '</div>';
-            }
-
-            $(document).find('.imgHeight').css('height', $(document).find('.divAlturaImg').height() + 'px !important');
-            $('.newsItem').append(htmlCarousel);
-            $('.miniBoxNews').append(htmlMiniBox);
-
-            $('.loadingSetup').css('display', 'none');
+            htmlCarousel += '\n' +
+                '<div class="carousel-item '+ active +'">\n' +
+                '   <div class="card border-0 rounded-0 text-light overflow zoom">\n' +
+                '       <div class="position-relative">\n' +
+                '           <!--thumbnail img-->\n' +
+                '           <div>\n' +
+                '               <a href="'+ item.url +'" target="_blank">\n' +
+                '                   <img class="img-fluid w-100 imgHeight"\n' +
+                '                       src="'+ item.urlToImage +'"\n' +
+                '                       width="150px" height="150px" \n' +
+                '                       alt="'+ item.title +'" style="object-fit: cover;">\n' +
+                '               </a>\n' +
+                '           </div>\n' +
+                '           <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">\n' +
+                '               <!--title-->\n' +
+                '               <a href="'+ item.url +'" target="_blank">\n' +
+                '                   <h4 class="post-title text-white my-1">'+ item.title +'</h4>\n' +
+                '               </a>\n' +
+                '               <!-- meta title -->\n' +
+                '               <div class="news-meta">\n' +
+                '                   <span class="news-author">'+ item.source.name +'</span>\n' +
+                '                   <span class="news-date">'+ dataPubFormatada +'</span>\n' +
+                '               </div>\n' +
+                '           </div>\n' +
+                '       </div>\n' +
+                '   </div>\n' +
+                '</div>';
         });
+
+        $('#newsItem').append(htmlCarousel);
+        $('.miniBoxNews').append(htmlMiniBox);
+        $('.loadingSetup').css('display', 'none');
+
+        console.log($(".boxConversao").height() - $(".boxTexto .h1").height() - 150 - 4);
+        $(document).find('img.imgHeight').height(parseInt($(".boxConversao").height() - $(".boxTexto .h1").height() - 150 - 8));
+
     }).fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
 
     }).always(function () {
-
     });
 }
 
