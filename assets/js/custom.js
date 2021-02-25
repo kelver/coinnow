@@ -107,6 +107,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
                 }).mount();
                 d.querySelector('.imgSlide').style.height = parseInt(d.querySelector(".glide__slides").clientHeight) + 'px';
                 loadText(document.querySelector('#moedas').value);
+                document.querySelector('.loadingSetup').style.display = 'none';
             });
         })();
     }
