@@ -46,24 +46,22 @@ d.addEventListener("DOMContentLoaded", function(event) {
     }
 
     function loadText(sigla = '') {
-        var data = new FormData();
-        data.append('sigla', sigla);
-
-        //trás moeda padrão de acesso
-        (async () => {
-            const rawResponse = await fetch('functions/getText.php', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                },
-                body: data
-            });
-            // const content = await rawResponse.json();
-            await rawResponse.json().then(function(data){
-                console.log(data);
-                document.querySelector('.txtBox').innerHTML = data;
-            });
-        })();
+        // var data = new FormData();
+        // data.append('sigla', sigla);
+        //
+        // //trás moeda padrão de acesso
+        // (async () => {
+        //     const rawResponse = await fetch('functions/getText.php', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Accept': 'application/json',
+        //         },
+        //         body: data
+        //     });
+        //     await rawResponse.json().then(function(data){
+        //         document.querySelector('.txtBox').innerHTML = data;
+        //     });
+        // })();
     }
 
     function loadNews(search = 'bitcoin') {
@@ -123,8 +121,9 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     // evento de seleção de moeda
     document.querySelector('#moedas').addEventListener('change',function(){
+        document.querySelector('.loadingSetup').style.display = 'flex';
         loadCoin(this.value);
-        loadNews(this.value);
+        loadNews(this.textContent);
     });
 
     // Choices.js
@@ -137,6 +136,6 @@ d.addEventListener("DOMContentLoaded", function(event) {
             searchPlaceholderValue: null,
         });
         loadCoin(document.querySelector("#moedas").value);
-        loadNews(document.querySelector("#moedas").value);
+        loadNews(document.querySelector("#moedas").textContent);
     }
 });
