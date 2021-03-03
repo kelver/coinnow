@@ -3,7 +3,7 @@
     <section class="section-header overflow-hidden pt-7 pt-lg-8 bg-primary text-white">
         <div class="container">
             <div class="row">
-                <div class="col-5 text-center bg-warning">
+                <div class="col-md-5 sol-sm-12 text-center bg-warning">
                     <div class="col-12 text-center pt-3">
                         <h1>Conversão de <span id="moeda">Bitcoin</span></h1>
                     </div>
@@ -14,7 +14,7 @@
                         <span id="valor"></span>
                     </div>
                 </div>
-                <div class="col-7 text-center bg-roxo" style="min-height: 70vh;">
+                <div class="col-md-7 col-sm-12 text-center bg-roxo" style="min-height: 70vh;">
                     <div class="col-12 text-center pt-3">
                         <h1>Na mídia</h1>
                     </div>
